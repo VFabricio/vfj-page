@@ -1,5 +1,6 @@
 :root{
 	--darkest-blue: #3F4D84;
+	--svelte-orange: rgb(255, 62, 0);
 }
 
 body {
