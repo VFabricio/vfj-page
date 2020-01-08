@@ -26,6 +26,8 @@
 		font-family: "Itim", cursive;
 		font-size: 30pt;
 		font-style: italic;
+		height: 100%;
+		line-height: 100%;
 		padding: 0 15pt 0 10pt;
 	}
 </style>
