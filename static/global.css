@@ -1,5 +1,7 @@
 :root{
 	--darkest-blue: #3F4D84;
+	--lighter-blue: #78A5FF;
+	--nav-height: 35pt;
 	--svelte-orange: rgb(255, 62, 0);
 }
 
