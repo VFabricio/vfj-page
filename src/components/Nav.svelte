@@ -8,7 +8,7 @@
 		background-color: var(--darkest-blue);
 		display: flex;
 		color: white;
-		height: 35pt;
+		height: var(--nav-height);
 	}
 
 	a {
