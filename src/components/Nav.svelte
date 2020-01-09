@@ -4,16 +4,17 @@
 
 <style>
 	nav {
-		align-items: center;
 		background-color: var(--darkest-blue);
-		display: flex;
 		color: white;
 		height: var(--nav-height);
+		width: 100vw;
+		position: fixed;
+		z-index: 2;
 	}
 
 	a {
-		font-size: 18pt;
-		padding: 0 0 0 15pt;
+		font-size: 26px;
+		padding: 0 0 0 15px;
 		text-decoration: none;
 	}
 
@@ -22,13 +23,9 @@
 	}
 
 	#site-title {
-		border-right: solid white 2px;
-		font-family: "Itim", cursive;
-		font-size: 30pt;
-		font-style: italic;
-		height: 100%;
-		line-height: 100%;
-		padding: 0 15pt 0 10pt;
+		font-family: "Poiret One", cursive;
+		font-size: 34px;
+		padding: 0 10px 0 var(--left-line);
 	}
 </style>
 
