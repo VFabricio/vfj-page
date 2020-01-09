@@ -33,7 +33,11 @@
 
 <h1>{status}</h1>
 
+{#if status===404}
+<p>These aren't the droi... ahem... isn't the page you're looking for.</p>
+{:else}
 <p>{error.message}</p>
+{/if}
 
 {#if dev && error.stack}
 	<pre>{error.stack}</pre>
