@@ -1,4 +1,6 @@
 <script>
+	import { onMount } from 'svelte'
+
 	import LeftSideBar from '../components/LeftSideBar.svelte'
 	import Nav from '../components/Nav.svelte'
 	
@@ -8,12 +10,14 @@
 
 	export let segment;
 
-	const handleLoad = () => {
-		const mql = window.matchMedia('(min-width: 768px)');
-		if (mql.matches) {
+	const showSidebarOnDesktop = () => {
+		const isDesktop = window.matchMedia('(min-width: 768px)').matches;
+		if (isDesktop) {
 			sidebarVisible.set(true);
 		}
 	}
+
+	onMount(showSidebarOnDesktop)
 </script>
 
 <style>
@@ -54,9 +58,6 @@
 		}
 	}
 </style>
-
-<svelte:window on:load={handleLoad}/>
-
 
 <div id="page" class:invisibleSidebar>
 	<div id="nav-container">
