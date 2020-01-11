@@ -10,6 +10,20 @@
 
 	export let segment;
 
+	const hideSidebarOnMobile = () => {
+		const isMobile = window.matchMedia('(max-width: 768px)').matches;
+		if (isMobile) {
+			sidebarVisible.set(false);
+		}
+	}
+
+	const showSidebarOnMobile = () => {
+		const isMobile = window.matchMedia('(max-width: 768px)').matches;
+		if (isMobile) {
+			sidebarVisible.set(true);
+		}
+	}
+
 	const showSidebarOnDesktop = () => {
 		const isDesktop = window.matchMedia('(min-width: 768px)').matches;
 		if (isDesktop) {
@@ -18,6 +32,38 @@
 	}
 
 	onMount(showSidebarOnDesktop)
+
+	// variables for detecting sliding actions
+	let x = 0;
+	const slideBreakpoint = 20
+
+	const handleMouseDown = e => {
+		x = e.clientX
+	}
+
+	const handleMouseUp = e => {
+		let finalX = e.clientX	
+		if (finalX - x > slideBreakpoint) {
+			showSidebarOnMobile()
+		}
+		if (finalX - x < -slideBreakpoint) {
+			hideSidebarOnMobile()
+		}
+	}
+
+	const handleTouchStart = e => {
+		x = e.changedTouches[0].clientX
+	}
+
+	const handleTouchEnd = e => {
+		let finalX = e.changedTouches[0].clientX	
+		if (finalX - x > slideBreakpoint) {
+			showSidebarOnMobile()
+		}
+		if (finalX - x < -slideBreakpoint) {
+			hideSidebarOnMobile()
+		}
+	}
 </script>
 
 <style>
@@ -59,6 +105,8 @@
 		}
 	}
 </style>
+
+<svelte:body on:mousedown={handleMouseDown} on:mouseup={handleMouseUp} on:touchstart={handleTouchStart} on:touchend={handleTouchEnd}/>
 
 <div id="page" class:invisibleSidebar>
 	<div id="nav-container">
