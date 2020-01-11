@@ -24,7 +24,8 @@
 	main {
 		grid-column: 2/3;
 		grid-row: 2/3;
-		overflow: auto;
+		overflow-x: none;
+		overflow-y: auto;
 		padding: 30px;
 	}
 
