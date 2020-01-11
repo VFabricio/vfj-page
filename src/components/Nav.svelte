@@ -4,10 +4,9 @@
 
 	const handleClick = () => {
 		sidebarVisible.update(visible => !visible)
-		verticalBars = !verticalBars
 	}
 
-	let verticalBars = false;
+	$: verticalBars = $sidebarVisible
 </script>
 
 <style>
