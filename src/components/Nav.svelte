@@ -1,10 +1,8 @@
 <script>
-	import { sidebarVisible } from './stores.js'
+	import { sidebarVisible, toggleSidebar } from './stores.js'
 	export let segment;
 
-	const handleClick = () => {
-		sidebarVisible.update(visible => !visible)
-	}
+	const handleClick = toggleSidebar
 
 	$: verticalBars = $sidebarVisible
 </script>

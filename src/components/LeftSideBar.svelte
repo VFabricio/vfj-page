@@ -1,3 +1,14 @@
+<script>
+
+import { toggleSidebar } from './stores.js'
+
+const handleClick = () => {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches
+    if (isMobile) toggleSidebar()
+}
+
+</script>
+
 <style>
 
     a {
@@ -100,16 +111,16 @@
 
 <aside>
     <section>
-        <a href="/"><img src="vfj-thinking.png" alt="A man thinking."></a>
-        <a id="name" href="/">Fabricio Juliatto</a>
+        <a on:click={handleClick} href="/"><img src="vfj-thinking.png" alt="A man thinking."></a>
+        <a on:click={handleClick} id="name" href="/">Fabricio Juliatto</a>
         <div id="description">
             <p>Software Developer</p>
             <p>Byte herder</p>
             <p>Learner of all things awesome</p>
         </div>
     </section>
-        <a class="nav-links" href="blog">Blog</a>
-        <a class="nav-links" href="projects">Projects</a>
+        <a on:click={handleClick} class="nav-links" href="blog">Blog</a>
+        <a on:click={handleClick} class="nav-links" href="projects">Projects</a>
     <section>
 
     </section>
