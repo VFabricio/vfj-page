@@ -45,10 +45,12 @@
     }
 
     #name {
+        font-family: 'Itim', cursive;
         font-size: 32px;
         font-style: normal;
         font-weight: bolder;
         padding: 5px 0;
+        text-decoration: none;
     }
 
     .nav-links {
@@ -98,8 +100,8 @@
 
 <aside>
     <section>
-        <img src="vfj-thinking.png" alt="A man thinking.">
-        <p id="name">Fabricio Juliatto</p>
+        <a href="/"><img src="vfj-thinking.png" alt="A man thinking."></a>
+        <a id="name" href="/">Fabricio Juliatto</a>
         <div id="description">
             <p>Software Developer</p>
             <p>Byte herder</p>
