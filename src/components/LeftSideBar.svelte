@@ -127,7 +127,7 @@ const handleClick = () => {
 
     <section>
         <p id="contact-me">Contact Me:</p>
-            <a href="mailto:vfabricio2201@gmail.com">
+            <a href="mailto:fabricio@juliatto.com">
                 <i class="fas fa-envelope"></i>vfabricio2201@gmail.com
             </a>
             <a href="https://twitter.com/vfabricio">
