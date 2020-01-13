@@ -33,6 +33,7 @@ const handleClick = () => {
 
     img {
         border-radius: 50%;
+        height: 120px;
         margin: 20px 0 0 0;
         width: 120px;
     }
@@ -78,6 +79,7 @@ const handleClick = () => {
         }
 
         img {
+            height: 80px;
             width: 80px;
         }
 
@@ -128,7 +130,7 @@ const handleClick = () => {
     <section>
         <p id="contact-me">Contact Me:</p>
             <a href="mailto:fabricio@juliatto.com">
-                <i class="fas fa-envelope"></i>vfabricio2201@gmail.com
+                <i class="fas fa-envelope"></i>fabricio@juliatto.com
             </a>
             <a href="https://twitter.com/vfabricio">
                 <i class="fab fa-twitter"></i>VFabricio
