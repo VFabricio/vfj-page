@@ -1,38 +1,28 @@
-:root{
-	--darkest-blue: #3F4D84;
-	--left-line: 10px;
-	--lighter-blue: #78A5FF;
-	--lighter-orange: #FF6637;
-	--nav-height: 50px;
-	--sidebar-width: 300px;
-	--svelte-orange: #FF3E00;
-}
-
 *, *:after, *:before {
 	box-sizing: border-box;
 }
 
-body {
-	margin: 0;
-	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-	font-size: 14px;
-	height: 100%;
-	line-height: 1.5;
-	color: #333;
+:root{
+	--darkest-blue: #3F4D84;
+	--lighter-blue: #78A5FF;
+	--lighter-orange: #FF6637;
+	--svelte-orange: #FF3E00;
+	--left-line: 7px;
+	--nav-height: 50px;
+	--sidebar-width: 200px;
 }
 
 html {
 	height: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	margin: 0 0 0.5em 0;
-	font-weight: 400;
-	line-height: 1.2;
-}
-
-h1 {
-	font-size: 2em;
+body {
+	color: #333;
+	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-size: 20px;
+	height: 100%;
+	line-height: 1.5;
+	margin: 0;
 }
 
 a {
@@ -40,18 +30,28 @@ a {
 }
 
 code {
-	font-family: menlo, inconsolata, monospace;
-	font-size: calc(1em - 2px);
 	color: #555;
-	background-color: #f0f0f0;
-	padding: 0.2em 0.4em;
-	border-radius: 2px;
+	background-color: #f9f9f9;
+	font-family: Fira Code, inconsolata, monospace;
+	font-weight: 300;
 }
 
-@media (max-width: 768px) {
+h1 {
+  font-size: 32px;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+@media (min-width: 768px) {
 	:root {
-		--left-line: 7px;
-		--sidebar-width: 200px;
+		--left-line: 10px;
+		--sidebar-width: 300px;
 	}
 }
 
