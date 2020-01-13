@@ -13,10 +13,14 @@ const handleClick = () => {
 
 <style>
 
+    :root {
+        --fancy-font: 'Itim', serif;
+    }
+
     a {
         align-items: center;
         display: flex;
-        font-size: 15px;
+        font-size: 14px;
         margin-bottom: 5px;
     }
 
@@ -25,7 +29,7 @@ const handleClick = () => {
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
-        position: relative;
+        padding-left: var(--left-line);
     }
 
     i {
@@ -34,78 +38,68 @@ const handleClick = () => {
     }
 
     img {
+        --img-size: 80px;
         border-radius: 50%;
-        height: 120px;
-        margin: 20px 0 0 0;
-        width: 120px;
+        height: var(--img-size);
+        margin-top: 20px;
+        width: var(--img-size);
     }
 
     p {
-        font-family: 'Itim', cursive;
-        font-size: 18px;
+        font-family: var(--fancy-font);
+        font-size: 14px;
         font-style: italic;
         margin: 0;
     }
 
     section {
-        margin-left: var(--left-line);
         margin-bottom: 30px;
     }
 
     #contact-me {
-        font-family: 'Itim', cursive;
-        font-size: 25px;
+        font-family: var(--fancy-font);
+        font-size: 24px;
         margin-left: -2.5px;
+        margin-bottom: 5px;
     }
 
     #name {
-        font-family: 'Itim', cursive;
-        font-size: 32px;
-        font-style: normal;
+        font-family: var(--fancy-font);
+        font-size: 25px;
         font-weight: bolder;
-        padding: 5px 0;
         text-decoration: none;
     }
 
     .nav-links {
-        font-family: 'Itim', cursive;
-        font-size: 20px;
-        padding-left: var(--left-line);
+        font-family: var(--fancy-font);
         text-decoration: none;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 768px) {
 
         a {
-            font-size: 12px;
+            font-size: 16px;
         }
 
         img {
-            height: 80px;
-            width: 80px;
-        }
-
-        section {
-            margin-bottom: 30px;
+            --img-size: 120px;
         }
 
         #contact-me {
-            font-size: 20px;
+            font-size: 30px;
             margin-top: 10px;
         }
 
         #description p{
-            font-size: 12px;
+            font-size: 20px;
         }
 
         #name {
-            font-size: 23px;
+            font-size: 30px;
             margin-top: 10px;
             margin-bottom: 5px;
         }
-    }
 
-    @media (min-width: 768px) {
         .nav-links {
             display: none;
         }
