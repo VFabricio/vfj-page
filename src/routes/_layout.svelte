@@ -10,23 +10,25 @@
 
 	export let segment;
 
+	const breakpoint = '768px'
+
+	const isMobile = breakpoint => window.matchMedia(`(max-width: ${breakpoint})`).matches
+	const isDesktop = breakpoint => !isMobile(breakpoint)
+
 	const hideSidebarOnMobile = () => {
-		const isMobile = window.matchMedia('(max-width: 768px)').matches;
-		if (isMobile) {
+		if (isMobile(breakpoint)) {
 			sidebarVisible.set(false);
 		}
 	}
 
 	const showSidebarOnMobile = () => {
-		const isMobile = window.matchMedia('(max-width: 768px)').matches;
-		if (isMobile) {
+		if (isMobile(breakpoint)) {
 			sidebarVisible.set(true);
 		}
 	}
 
 	const showSidebarOnDesktop = () => {
-		const isDesktop = window.matchMedia('(min-width: 768px)').matches;
-		if (isDesktop) {
+		if (isDesktop(breakpoint)) {
 			sidebarVisible.set(true);
 		}
 	}
@@ -70,7 +72,7 @@
 	main {
 		grid-column: 2/3;
 		grid-row: 2/3;
-		overflow-x: none;
+		overflow-x: hidden;
 		overflow-y: auto;
 		padding: 30px;
 	}
@@ -97,12 +99,6 @@
 
 	#page.invisibleSidebar {
 		grid-template-columns: 0 auto;
-	}
-
-	@media (max-width: 768px) {
-		main {
-			font-size: 12px;
-		}
 	}
 </style>
 
