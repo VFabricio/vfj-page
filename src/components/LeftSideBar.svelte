@@ -28,7 +28,6 @@ const handleClick = () => {
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;
-        padding-left: var(--left-line);
     }
 
     i {
@@ -53,6 +52,7 @@ const handleClick = () => {
 
     section {
         margin-bottom: 30px;
+        margin-left: var(--left-line);
     }
 
     #contact-me {
@@ -72,6 +72,7 @@ const handleClick = () => {
     .nav-links {
         font-family: var(--fancy-font);
         font-size: 20px;
+        margin-left: var(--left-line); 
         text-decoration: none;
     }
 

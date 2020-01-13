@@ -12,25 +12,25 @@
 
 	export let segment;
 
+	const delayedHideSidebarOnMobile = () => {
+		if (isMobile(breakpoint)) {
+			setTimeout(() => sidebarVisible.set(false), 1000)
+		}
+	}
+
 	const hideSidebarOnMobile = () => {
 		if (isMobile(breakpoint)) {
-			sidebarVisible.set(false);
+			sidebarVisible.set(false)
 		}
 	}
 
 	const showSidebarOnMobile = () => {
 		if (isMobile(breakpoint)) {
-			sidebarVisible.set(true);
+			sidebarVisible.set(true)
 		}
 	}
 
-	const showSidebarOnDesktop = () => {
-		if (isDesktop(breakpoint)) {
-			sidebarVisible.set(true);
-		}
-	}
-
-	onMount(showSidebarOnDesktop)
+	onMount(delayedHideSidebarOnMobile)
 
 	// variables for detecting sliding actions
 	let x = 0;
