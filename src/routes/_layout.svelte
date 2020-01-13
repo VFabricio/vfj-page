@@ -6,14 +6,11 @@
 	
 	import { sidebarVisible } from '../components/stores.js'
 
+	import { breakpoint, isDesktop, isMobile } from '../media-queries.js'
+
 	$: invisibleSidebar = !$sidebarVisible
 
 	export let segment;
-
-	const breakpoint = '768px'
-
-	const isMobile = breakpoint => window.matchMedia(`(max-width: ${breakpoint})`).matches
-	const isDesktop = breakpoint => !isMobile(breakpoint)
 
 	const hideSidebarOnMobile = () => {
 		if (isMobile(breakpoint)) {

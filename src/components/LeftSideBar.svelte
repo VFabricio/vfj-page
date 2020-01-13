@@ -2,6 +2,8 @@
 
 import { toggleSidebar } from './stores.js'
 
+import { breakpoint, isMobile } from '../media-queries.js'
+
 const handleClick = () => {
     const isMobile = window.matchMedia('(max-width: 768px)').matches
     if (isMobile) toggleSidebar()
