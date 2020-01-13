@@ -37,33 +37,43 @@
 
 	// variables for detecting sliding actions
 	let x = 0;
-	const slideBreakpoint = 20
+	let y = 0;
+	const minHorizontalSlide = 100
+	const maxVerticalSlide = 200
 
 	const handleMouseDown = e => {
 		x = e.clientX
+		y = e.clientY
 	}
 
 	const handleMouseUp = e => {
 		let finalX = e.clientX	
-		if (finalX - x > slideBreakpoint) {
-			showSidebarOnMobile()
-		}
-		if (finalX - x < -slideBreakpoint) {
-			hideSidebarOnMobile()
+		let finalY = e.clientY
+		if (Math.abs(finalY - y) < maxVerticalSlide) {
+			if (finalX - x > minHorizontalSlide) {
+				showSidebarOnMobile()
+			}
+			if (finalX - x < -minHorizontalSlide) {
+				hideSidebarOnMobile()
+			}
 		}
 	}
 
 	const handleTouchStart = e => {
 		x = e.changedTouches[0].clientX
+		y = e.changedTouches[0].clientY
 	}
 
 	const handleTouchEnd = e => {
 		let finalX = e.changedTouches[0].clientX	
-		if (finalX - x > slideBreakpoint) {
-			showSidebarOnMobile()
-		}
-		if (finalX - x < -slideBreakpoint) {
-			hideSidebarOnMobile()
+		let finalY = e.changedTouches[0].clientY
+		if (Math.abs(finalY - y) < maxVerticalSlide) {
+			if (finalX - x > minHorizontalSlide) {
+				showSidebarOnMobile()
+			}
+			if (finalX - x < -minHorizontalSlide) {
+				hideSidebarOnMobile()
+			}
 		}
 	}
 </script>
