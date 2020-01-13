@@ -5,8 +5,7 @@ import { toggleSidebar } from './stores.js'
 import { breakpoint, isMobile } from '../media-queries.js'
 
 const handleClick = () => {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches
-    if (isMobile) toggleSidebar()
+    if (isMobile(breakpoint)) toggleSidebar()
 }
 
 </script>
@@ -14,7 +13,7 @@ const handleClick = () => {
 <style>
 
     :root {
-        --fancy-font: 'Itim', serif;
+        --fancy-font: 'Gelasio', serif;
     }
 
     a {
@@ -58,20 +57,21 @@ const handleClick = () => {
 
     #contact-me {
         font-family: var(--fancy-font);
-        font-size: 24px;
+        font-size: 20px;
         margin-left: -2.5px;
         margin-bottom: 5px;
     }
 
     #name {
         font-family: var(--fancy-font);
-        font-size: 25px;
+        font-size: 22px;
         font-weight: bolder;
         text-decoration: none;
     }
 
     .nav-links {
         font-family: var(--fancy-font);
+        font-size: 20px;
         text-decoration: none;
     }
 
@@ -85,19 +85,25 @@ const handleClick = () => {
             --img-size: 120px;
         }
 
+        section {
+            margin-bottom: 50px;
+        }
+
         #contact-me {
             font-size: 30px;
-            margin-top: 10px;
+            margin-bottom: 7px;
+            margin-left: -3.5px;
         }
 
         #description p{
             font-size: 20px;
+            margin-bottom: 2px;
         }
 
         #name {
             font-size: 30px;
             margin-top: 10px;
-            margin-bottom: 5px;
+            margin-bottom: 7px;
         }
 
         .nav-links {
