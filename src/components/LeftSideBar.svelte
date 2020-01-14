@@ -32,6 +32,7 @@ const handleClick = () => {
 
     i {
         float: left;
+        font-size: 18px;
         margin-right: 5px;
     }
 
@@ -67,6 +68,11 @@ const handleClick = () => {
         font-size: 22px;
         font-weight: bolder;
         text-decoration: none;
+    }
+
+    .icon-envelope {
+        font-size: 14px;
+        margin-right: 7px;
     }
 
     .nav-links {
@@ -133,17 +139,17 @@ const handleClick = () => {
     <section>
         <p id="contact-me">Contact Me:</p>
             <a href="mailto:fabricio@juliatto.com">
-                <i class="fas fa-envelope"></i>fabricio@juliatto.com
+                <i class="icon-envelope"></i>fabricio@juliatto.com
             </a>
             <a href="https://twitter.com/vfabricio">
-                <i class="fab fa-twitter"></i>VFabricio
+                <i class="icon-twitter"></i>VFabricio
             </a>
             
             <a href="https://github.com/vfabricio">
-                <i class="fab fa-github"></i>VFabricio
+                <i class="icon-github"></i>VFabricio
             </a>
             <a href="https://linkedin.com/in/vilson-fabricio-juliatto">
-                <i class="fab fa-linkedin"></i>vilson-fabricio-juliatto
+                <i class="icon-linkedin"></i>vilson-fabricio-juliatto
             </a>
     </section>
 </aside>
