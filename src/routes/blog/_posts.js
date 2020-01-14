@@ -19,7 +19,7 @@ const getTitle = html => {
 	return html.slice(start + 1, end)
 }
 const generateSlug = text => (
-	text.toLowerCase().replace(/,\ |\ -\ |:\ |:|\ /g, '-').replace(/[^a-zA-Z-]/, '')
+	text.toLowerCase().replace(/,\ |\ -\ |:\ |:|\ /g, '-').replace(/[^a-zA-Z0-9-]/g, '')
 )
 
 const htmlToJson = html => {
