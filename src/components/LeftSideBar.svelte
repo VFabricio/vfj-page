@@ -120,7 +120,7 @@ const handleClick = () => {
         <a on:click={handleClick} id="name" href="/">Fabricio Juliatto</a>
         <div id="description">
             <p>Software Developer</p>
-            <p>Byte herder</p>
+            <p>UX zealot</p>
             <p>Learner of all things awesome</p>
         </div>
     </section>
