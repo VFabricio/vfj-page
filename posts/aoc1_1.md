@@ -113,3 +113,5 @@ Hopefully, even folks who are not used to PureScript can at least get the gist o
 
 [^1]: In reality, `map` is more general than this. The second argument doesn't have to be just an array, but can be any of a class of things called _functors_. That's why I avoided writing `map`'s type signature, which, in it's full glory, is `map :: forall a b f. Functor f => (a -> b) -> f a -> f b`.
 [^2]: You may find it confusing that there are two things called `maybe`/`Maybe`, one being a function and another being a type, differing only by capitalization. That is fine because, basically, PureScript, has two namespaces, one for names at the value-level and another for names at the type-level and it distinguishes (this is forced by the compiler) between them with capitalization. In other words, you can't write a type with a lowercase name, nor can you write a function with an capital initial. So, it's easy to know which is which when see pairs like `maybe`/`Maybe`.
+
+2020-01-14T16:22:00-03:00
