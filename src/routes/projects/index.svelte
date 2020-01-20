@@ -37,7 +37,7 @@
 <div>
     <h2>Juliatto.dev</h2>
     <img src="vfj-page.png" alt="A printscreen of this website.">
-    <p>This very page! It was written using using the new hottest thing in JavaScript-land, Svelte, and the accompanying application framework, Sapper. Except for constructing the components, the only thing I had to do on top of Sapper was to add support for writing my blog posts in Markdown. The site is completely server side rendered and exported as a static website.</p>
+    <p>This very page! It was written using the new hottest thing in JavaScript-land, Svelte, and the accompanying application framework, Sapper. Except for constructing the components, the only thing I had to do on top of Sapper was to add support for writing my blog posts in Markdown. The site is completely server side rendered and exported as a static website.</p>
     <p>I have deployed it using Amazon Web Services. It is hosted on S3 and served from the CloudFront CDN, which not only helps with speed but allows me to serve the site over https.</p>
 </div>
 
