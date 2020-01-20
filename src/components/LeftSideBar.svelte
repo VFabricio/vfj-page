@@ -132,6 +132,7 @@ const handleClick = () => {
     </section>
         <a on:click={handleClick} class="nav-links" href="blog">Blog</a>
         <a on:click={handleClick} class="nav-links" href="projects">Projects</a>
+        <a on:click={handleClick} class="nav-links" href="about-me">About Me</a>
     <section>
 
     </section>

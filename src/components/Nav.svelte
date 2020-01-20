@@ -59,4 +59,5 @@
 	<a id="site-title" href="/">Juliatto.dev</a>
 	<a class:selected="{segment==='blog'}" class="nav-links" href="blog">Blog</a>
 	<a class:selected="{segment==='projects'}" class="nav-links" href="projects">Projects</a>
+	<a class:selected="{segment==='about-me'}" class="nav-links" href="about-me">About Me</a>
 </nav>
