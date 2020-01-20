@@ -14,6 +14,19 @@
 </script>
 
 <script>
+	import { onMount } from 'svelte'
+
+	onMount(() => {
+		const fixHref = href => {
+			const position = href.lastIndexOf('#')
+			return 'blog/' + post.slug + href.slice(position)
+		}
+
+		const links = document.querySelectorAll('a')
+		const relativeLinks = [...links].filter(link => link.href.includes('#'))
+		relativeLinks.forEach(link => link.href = fixHref(link.href))
+	})
+
 	export let post;
 </script>
 
