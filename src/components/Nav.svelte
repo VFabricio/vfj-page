@@ -8,18 +8,6 @@
 </script>
 
 <style>
-	@media (max-width: 768px) {
-		.nav-links {
-			display: none;
-		}
-	}
-
-	@media (min-width: 768px) {
-		.fa-bars {
-			display: none;
-		}
-	}
-
 	nav {
 		background-color: var(--darkest-blue);
 		color: white;
@@ -33,7 +21,7 @@
 		text-decoration: none;
 	}
 
-	.fa-bars {
+	.icon-bars {
 		font-size: 30px;
 		margin-left: var(--left-line);
 	}
@@ -49,13 +37,25 @@
 	}
 
 	.verticalBars {
+		display: inline-block;
 		transform: rotate(-90deg);
 	}
 
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+		}
+	}
+
+	@media (min-width: 768px) {
+		.icon-bars {
+			display: none;
+		}
+	}
 </style>
 
 <nav>
-	<i class="fas fa-bars" class:verticalBars on:click={handleClick}></i>
+	<i class="icon-bars" class:verticalBars on:click={handleClick}></i>
 	<a id="site-title" href="/">Juliatto.dev</a>
 	<a class:selected="{segment==='blog'}" class="nav-links" href="blog">Blog</a>
 	<a class:selected="{segment==='projects'}" class="nav-links" href="projects">Projects</a>
