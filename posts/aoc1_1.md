@@ -35,7 +35,7 @@ However, Purescript allows functions that take two or more parameters to be used
 
 ### Computing the total fuel
 
-Suppose now that we have an array containing the masses of all the modules. We need to do two things: first, compute that the fuel for each one and then sum all of the results to get the total. For someone coming from an imperative background, this sounds like it call for a loop. In functional programming we reach for a [map](https://en.wikipedia.org/wiki/Map_(higher-order_function) "Wikipedia - Map") instead. The `map` function takes two arguments, a function and an array and returns a new array consisting of applying the function to all elements of the input array [^1].
+Suppose now that we have an array containing the masses of all the modules. We need to do two things: first, compute that the fuel for each one and then sum all of the results to get the total. For someone coming from an imperative background, this sounds like it call for a loop. In functional programming we reach for a [map](https://en.wikipedia.org/wiki/Map_(higher-order_function) "Wikipedia - Map") instead. The `map` function takes two arguments, a function and an array and returns a new array consisting of applying the function to all elements of the input array <sup id="to-footnote-map">[1](#footnote-map)</sup>.
 
 So, if we have an array `moduleMasses` the corresponding fuel array is simply `map fuelFromMass moduleMasses`. Then we use the `sum` function to get the total value:
 
@@ -69,7 +69,7 @@ The next step is a bit subtle. We need to turn a `String` into an `Int`. There i
 
 A type like `Maybe Int` contains a special value, `Nothing`, which denotes the _absence of a valid value_. Then, for example, `fromString "34.53"` returns `Nothing`, which signals that it couldn't parse its input. But what does `fromString "3"` return? It cannot be `3` because that is an `Int` and we need to return a `Maybe Int`. The way to wrap an `Int` into a `Maybe Int` is with a `Just` constructor. In other words, `fromString 3` returns `Just 3`.
 
-At the end of the day, we need to work with `Int` and not with `Maybe Int`. So, we need to unwrap the `Just` values and decide what to do with `Nothing`. For the solution of this puzzle the last point doesn't really make a difference, since the given input contains only valid integers and no `Nothing` ins generated. However, PureScript doesn't know that and it forces us to be consistent and handle failure appropriately. We do that with the `maybe` function, which allows us to unwrap a `Maybe` [^2], while providing a default value
+At the end of the day, we need to work with `Int` and not with `Maybe Int`. So, we need to unwrap the `Just` values and decide what to do with `Nothing`. For the solution of this puzzle the last point doesn't really make a difference, since the given input contains only valid integers and no `Nothing` ins generated. However, PureScript doesn't know that and it forces us to be consistent and handle failure appropriately. We do that with the `maybe` function, which allows us to unwrap a `Maybe` <sup id="to-footnote-maybe">[2](#footnote-maybe)</sup>, while providing a default value
 
 I wrote this step and the last as a single function
 
@@ -96,8 +96,8 @@ import Prelude (Unit, bind, div, identity, map, show, (-), ($), (<>), (<<<))
 
 main :: Effect Unit
 main = do
-  text <- readTextFile ASCII "./input.txt"
-  log $ "Part 1: " <> (show $ totalFuel <<< readNumbers $ text)
+text <- readTextFile ASCII "./input.txt"
+log $ "Part 1: " <> (show $ totalFuel <<< readNumbers $ text)
 
 readNumbers :: String -> Array Int
 readNumbers = map (maybe 0 identity <<< fromString) <<< (split (Pattern "\n"))
@@ -111,7 +111,8 @@ totalFuel = sum <<< (map fuelFromMass)
 
 Hopefully, even folks who are not used to PureScript can at least get the gist of this. Once again, I will be happy to (try to) answer any questions you may have. In the next post I will tackle the part 2 of this puzzle. Thanks for reading!
 
-[^1]: In reality, `map` is more general than this. The second argument doesn't have to be just an array, but can be any of a class of things called _functors_. That's why I avoided writing `map`'s type signature, which, in it's full glory, is `map :: forall a b f. Functor f => (a -> b) -> f a -> f b`.
-[^2]: You may find it confusing that there are two things called `maybe`/`Maybe`, one being a function and another being a type, differing only by capitalization. That is fine because, basically, PureScript, has two namespaces, one for names at the value-level and another for names at the type-level and it distinguishes (this is forced by the compiler) between them with capitalization. In other words, you can't write a type with a lowercase name, nor can you write a function with an capital initial. So, it's easy to know which is which when see pairs like `maybe`/`Maybe`.
+<a id="footnote-map">1</a>: In reality, `map` is more general than this. The second argument doesn't have to be just an array, but can be any of a class of things called _functors_. That's why I avoided writing `map`'s type signature, which, in it's full glory, is `map :: forall a b f. Functor f => (a -> b) -> f a -> f b`. [&hookleftarrow;](#to-footnote-map)
+
+<a id="footnote-maybe">2</a>: You may find it confusing that there are two things called `maybe`/`Maybe`, one being a function and another being a type, differing only by capitalization. That is fine because, basically, PureScript, has two namespaces, one for names at the value-level and another for names at the type-level and it distinguishes (this is forced by the compiler) between them with capitalization. In other words, you can't write a type with a lowercase name, nor can you write a function with an capital initial. So, it's easy to know which is which when see pairs like `maybe`/`Maybe`. [&hookleftarrow;](#to-footnote-maybe)
 
 2020-01-14T16:22:00-03:00
