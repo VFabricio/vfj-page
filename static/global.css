@@ -3,10 +3,12 @@
 }
 
 :root{
-	--darkest-blue: #3F4D84;
-	--lighter-blue: #78A5FF;
-	--lighter-orange: #FF6637;
-	--svelte-orange: #FF3E00;
+	--main-color: #0F0A0A;
+	--alternate-color: #73877B;
+	--main-reverse-color: #FEFDFD;
+	--alternate-reverse-color: #D0E3CC;
+	--decoration-color: #2291A4;
+
 	--left-line: 7px;
 	--nav-height: 50px;
 	--sidebar-width: 200px;
@@ -17,7 +19,8 @@ html {
 }
 
 body {
-	color: #333;
+	background-color: var(--main-reverse-color);
+	color: var(--main-color);
 	font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 	font-size: 16px;
 	height: 100%;

@@ -1,6 +1,6 @@
 <style>
     div {
-        background-color: #F0F0FF;
+        background-color: var(--alternate-reverse-color);
         padding-bottom: 20px;
         padding-left: 20px;
         padding-right: 10px;

@@ -42,8 +42,8 @@
 
 <style>
 	a {
-		background-color: blue;
-		color: white;
+		background-color: var(--decoration-color);
+		color: var(--main-reverse-color);
 		margin: 0;
 		text-decoration: none
 	}
@@ -53,12 +53,12 @@
 	}
 
 	#prompt {
-		color: var(--svelte-orange);
+		color: var(--decoration-color);
 	}
 
 	#terminal {
-		background-color: black;
-		color: #00FF00;
+		background-color: var(--main-color);
+		color: var(--main-reverse-color);
 		font-family: Fira Code, monospace;
 		padding: 10px;
 		height: 400px;

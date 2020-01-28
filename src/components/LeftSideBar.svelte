@@ -24,7 +24,7 @@ const handleClick = () => {
     }
 
     aside {
-        background: linear-gradient(var(--darkest-blue) 0%, var(--lighter-blue) 35%);
+        background-color: var(--decoration-color);
         height: 100%;
         overflow-x: hidden;
         overflow-y: auto;

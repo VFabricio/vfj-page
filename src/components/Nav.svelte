@@ -9,8 +9,7 @@
 
 <style>
 	nav {
-		background-color: var(--darkest-blue);
-		color: white;
+		background-color: var(--decoration-color);
 		height: var(--nav-height);
 		width: 100%;
 	}
@@ -27,10 +26,11 @@
 	}
 
 	.selected {
-		color: var(--svelte-orange);
+		color: var(--main-reverse-color);
 	}
 
 	#site-title {
+		color: var(--main-reverse-color);
 		font-family: "Poiret One", cursive;
 		font-size: 34px;
 		padding: 0 10px 0 var(--left-line);
