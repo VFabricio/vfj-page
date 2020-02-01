@@ -21,6 +21,7 @@
 	}
 
 	.icon-bars {
+		color: var(--main-reverse-color);
 		font-size: 30px;
 		margin-left: var(--left-line);
 	}
