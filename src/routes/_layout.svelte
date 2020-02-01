@@ -86,10 +86,9 @@
 
 	#page {
 		display: grid;
-		grid-template-columns: var(--sidebar-width) auto;
+		grid-template-columns: var(--sidebar-width) minmax(300px, auto);
 		grid-template-rows: var(--nav-height) calc(100vh - var(--nav-height));
 		height: 100%;
-		overflow: hidden;
 		transition: all 200ms ease;
 		width: 100%;
 	}
